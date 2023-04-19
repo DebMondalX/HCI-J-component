@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="keyboard.css" />
+  </head>
+  <body>
+    <div class="centerThings">
+      <h1>Subscribe</h1>
+      <p>
+        Sign up and get exclusive content delivered right to your inbox 📧
+        You'll be so happy you did 😸
+      </p>
+      <form action="" method="post">
+        <label for="name">*Name</label>
+        <input id="name" type="text" placeholder="ex. Jane Doe" required />
+        <label for="email">*Email</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="ex. jane.doe@example.com"
+          pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

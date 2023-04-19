@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      <button
+        id="accordion-header-1"
+        aria-expanded="false"
+        aria-controls="accordion-panel-1"
+        data-accordion-header
+      >
+        Item 1
+        <svg aria-hidden="true">...</svg>
+      </button>
+    </h3>
+    <section id="accordion-panel-1" aria-labelledby="accordion-header-1" hidden>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </section>
+    <script>
+      const accordionHeaders = document.querySelectorAll(
+        "data-accordion-header"
+      );
+      Array.prototype.forEach.call(accordionHeaders, accordionHeader => {
+        let target = accordionHeader.parentElement.nextElementSibling;
+        accordionHeader.onclick = () => {
+          let expanded =
+            accordionHeader.getAttribute("aria-expanded") === "true" || false;
+          accordionHeader.setAttribute("aria-expanded", !expanded);
+          target.hidden = expanded;
+        };
+      });
+    </script>
+  </body>
+</html>
